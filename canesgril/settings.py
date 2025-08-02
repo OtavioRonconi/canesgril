@@ -34,7 +34,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = False
 #DEBUG=True
 #ALLOWED_HOSTS = ['*']
-ALLOWED_HOSTS = ['.railway.app', 'localhost', '104.18.11.246', '127.0.0.1']
+ALLOWED_HOSTS = ['.railway.app', 'canesgril-production-6897.up.railway.app', 'localhost', '104.18.11.246', '127.0.0.1', '66.33.22.111']
 
 
 # Application definition
