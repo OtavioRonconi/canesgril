@@ -167,4 +167,5 @@ SESSION_COOKIE_SECURE = True
 # Adicione o domínio base do Railway e qualquer domínio personalizado
 CSRF_TRUSTED_ORIGINS = [
     'https://*.railway.app',             # Para cobrir seu domínio Railway padrão
+    'canesgril-production-6897.up.railway.app',
 ]

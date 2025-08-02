@@ -24,12 +24,6 @@ __pycache__/
 #db.sqlite3
 #db.sqlite3-journal
 
-### Arquivos de Mídia e Estáticos ###
-# Ignore os arquivos enviados por usuários (media).
-# Os arquivos estáticos coletados também não precisam ser versionados.
-/media/
-/staticfiles/
-
 ### Arquivos de Configuração Local ###
 # Nunca envie arquivos com senhas, chaves de API ou outras informações sensíveis.
 # Crie um arquivo de exemplo (ex: .env.example) para que outros saibam quais variáveis são necessárias.
