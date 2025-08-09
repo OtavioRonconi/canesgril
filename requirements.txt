@@ -5,10 +5,15 @@ cloudinary
 Django
 django-cloudinary-storage
 django-stdimage
+djangorestframework
+djangorestframework_simplejwt
 idna
+Markdown
+packaging
 pillow
 psycopg2
 psycopg2-binary
+PyJWT
 python-dotenv
 requests
 six

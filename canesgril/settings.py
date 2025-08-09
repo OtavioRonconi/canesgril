@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 import os
+from datetime import timedelta
 import psycopg2
 import cloudinary
 import cloudinary.uploader
@@ -32,7 +33,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-#DEBUG=True
+# DEBUG = True
 #ALLOWED_HOSTS = ['*']
 ALLOWED_HOSTS = ['.railway.app', 'canesgril-production-6897.up.railway.app', 'localhost', '104.18.11.246', '127.0.0.1', '66.33.22.111']
 
@@ -43,16 +44,31 @@ INSTALLED_APPS = [
     'usuarios',
     'funcionario',
     'churras',
+    'api',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'rest_framework_simplejwt',
     'cloudinary',
     'cloudinary.forms',
-    'cloudinary.models'
+    'cloudinary.models',
+    'drf_spectacular',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(hours=1),
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
