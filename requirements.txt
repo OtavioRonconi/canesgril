@@ -20,5 +20,6 @@ six
 sqlparse
 tzdata
 urllib3
+drf_spectacular
 whitenoise
 gunicorn
